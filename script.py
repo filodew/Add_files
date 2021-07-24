@@ -16,7 +16,7 @@ def Add_uhfile():
 
     # path to chrome webdriver and destination web address in maximum browser window
     driver = webdriver.Chrome(executable_path=r'C:\uhfa\driver\chromedriver.exe')
-    driver.get('https://vhq-test.vfims.com')
+    driver.get('https://test-test.test.com') # this is an example
     driver.maximize_window()
 
     # Log in
@@ -51,7 +51,7 @@ def Add_uhfile():
 
     things = os.listdir("/uhfa/things/") # Files list from directory
 
-    # for loop - adding files to the vhq library
+    # for loop - adding files to the test library
     for thing in things:
         arg = os.path.splitext(thing)
         print(arg)
@@ -95,14 +95,14 @@ def Add_uhfile():
         driver.find_element_by_id("btnNextContent").click()
 
         # Models - checkboxes
-        driver.find_element_by_id("chkModel-90").click()  # v240m 2G
-        driver.find_element_by_id("chkModel-87").click()  # v240m 3G
-        driver.find_element_by_id("chkModel-76").click()  # v240m 3G Plus
-        driver.find_element_by_id("chkModel-99").click()  # v240m 3G Plus camera
-        driver.find_element_by_id("chkModel-107").click()  # v240m 3GWB
-        driver.find_element_by_id("chkModel-123").click()  # v240m B-FF
-        driver.find_element_by_id("chkModel-89").click()  # v240m 3GBWC
-        driver.find_element_by_id("chkModel-122").click()  # v240m BT/WIFI
+        driver.find_element_by_id("chkModel-90").click()
+        driver.find_element_by_id("chkModel-87").click()
+        driver.find_element_by_id("chkModel-76").click()
+        driver.find_element_by_id("chkModel-99").click()
+        driver.find_element_by_id("chkModel-107").click()
+        driver.find_element_by_id("chkModel-123").click()
+        driver.find_element_by_id("chkModel-89").click()
+        driver.find_element_by_id("chkModel-122").click()
 
         # click button "Next" (Upload file)
         driver.find_element_by_id("btnNextContent").click()
@@ -135,8 +135,8 @@ def Add_uhfile():
         # click Upload File button
         # driver.find_element_by_xpath("//*[@id='btnUploadContent']").click()
 
-        #driver.quit() # zamyka wszystkie otwarte przez selenium
-        # driver.close() - tylko to okno na którym byliśmy skupieni
+        #driver.quit() # closes all open ( browser cards) by selenium
+        # driver.close() - closes only used window
 
 
     Done()
